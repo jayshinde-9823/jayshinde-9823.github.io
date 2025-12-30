@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jay Shinde | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body { background:#020617; color:white; }
+.section { opacity:0; transform:translateY(60px); transition:1s; }
+.section.show { opacity:1; transform:none; }
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center">
+  <div class="text-center section">
+    <h1 class="text-5xl font-bold text-indigo-400">Jay Shinde</h1>
+    <p class="mt-4 text-xl text-gray-400">
+      Java & Web Developer | B.Sc IT
+    </p>
+
+    <div class="mt-6 space-x-4">
+      <a href="resume.pdf" download class="px-6 py-3 border border-indigo-400 hover:bg-indigo-600">
+        Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="py-32 text-center section">
+  <h2 class="text-3xl text-indigo-400 mb-6">About</h2>
+  <p class="max-w-xl mx-auto text-gray-400">
+    B.Sc IT graduate passionate about real-world applications,
+    systems, and interactive web experiences.
+  </p>
+</section>
+
+<!-- PROJECT -->
+<section class="py-32 text-center section">
+  <h2 class="text-3xl text-indigo-400 mb-6">Project</h2>
+  <p class="text-gray-400">
+    Shindeshahi Roadlines – Transportation Management System
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section class="py-32 text-center section">
+  <h2 class="text-3xl text-indigo-400 mb-6">Contact</h2>
+  <p class="text-gray-400">jayshinde9823@gmail.com</p>
+</section>
+
+<script>
+const sections = document.querySelectorAll(".section");
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
